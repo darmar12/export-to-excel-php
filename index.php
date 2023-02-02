@@ -1,3 +1,7 @@
+<?php
+include_once("db.php");
+include("export.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +29,13 @@
 					</tr>
 				</thead>
 				<tbody>
-					
+					<?foreach($table_tr as $tr):?>
+						<tr>
+							<td><?=$tr['name']?></td>
+							<td><?=$tr['age']?></td>
+							<td><?=$tr['email']?></td>
+						</tr>
+					<?endforeach;?>
 				</tbody>
 			</table>
 		</div>
